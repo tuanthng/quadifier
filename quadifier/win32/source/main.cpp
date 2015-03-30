@@ -53,6 +53,17 @@ void triggerStereo()
 
 int main(int argc, char **argv)
 {
+#ifdef _DEBUG
+	if (argc == 1)
+	{
+		char* ar_v[2];
+		ar_v[0] = argv[0];
+		ar_v[1] = path to unity .exe;
+
+		return main(2, ar_v);
+	}
+#endif
+
 	// trigger stereo mode in Windows by creating a temporary stereo window
 	triggerStereo();
 
