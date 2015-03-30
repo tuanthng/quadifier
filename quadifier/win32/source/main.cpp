@@ -58,20 +58,7 @@ int main(int argc, char **argv)
 
 	// the name of our DLL to be injected
 	static const string moduleName("module.dll");
-
-    // have we got an application filename?
-	if (argc > 1) {
-		// name of the application executable
-		string applicationName(argv[1]);
-
-		// build command line string
-		string commandLine;
-		for (int i = 2; i < argc; ++i) {
-			if (i > 2) commandLine += " ";
-			commandLine += string(argv[i]);
-		}
-	}
-
+	
 	// have we got an application filename?
 	if (argc > 1) {
 		// name of the application executable
